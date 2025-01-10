@@ -2,15 +2,22 @@
 
 A new Flutter project.
 
-## Getting Started
+This sample focuses more on getting the base functionality right rather than UI look.
 
-This project is a starting point for a Flutter application.
+We are using following libraries:
 
-A few resources to get you started if this is your first Flutter project:
+- provider : state management
+- dio : networking
+- freezed : for data models (The generated models are also commited which ideally shouldn't be)
+- url_launcher : for launching URLs :)
+- json_serializable : for serializing the freezed models
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+The app has two screen
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- ArticlesScreen
+- ArticleDetailScreen
+
+The whole app is wrapped in ArticlesProvider which provides list of articles;
+
+On ArticlesScreen screen the Top Headlines are shown.
+On the second screen; the Article model is passed directly from the first screen.
